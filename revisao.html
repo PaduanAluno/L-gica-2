@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Holanda + França</title>
+	</head>
+	
+	<body>
+		<style>
+			
+			body{
+				background: grey;
+			}
+		</style>
+	</body>
+</html>
+
+<canvas width="600" height="400"></canvas>
+
+<script>
+
+	var tela = document.querySelector("canvas");
+	var pincel = tela.getContext('2d');
+
+	function desenhaHolanda() {
+		pincel.fillStyle = "white"
+		pincel.fillRect(0, 70, 600, 400);
+
+		pincel.fillStyle = "blue"
+		pincel.fillRect(0, 130, 600, 400)
+
+		pincel.fillStyle = "red"
+		pincel.fillRect(0, 0, 600, 70)
+	}
+
+	function desenhaFrança() {
+		pincel.fillStyle = "white"
+		pincel.fillRect(0, 200, 600, 400);
+
+		pincel.fillStyle = "blue"
+		pincel.fillRect(0, 200, 200, 400)
+
+		pincel.fillStyle = "red"
+		pincel.fillRect(400, 200, 200, 400)
+	}
+
+	function desenhaEspacamento() {
+		pincel.fillStyle = "lightgrey";
+		pincel.fillRect(0, 200, 600, 25);
+	}
+
+	desenhaHolanda();
+	desenhaFrança();
+	desenhaEspacamento();
+</script>

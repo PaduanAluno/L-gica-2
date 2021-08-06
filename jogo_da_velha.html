@@ -1,0 +1,156 @@
+<meta charset="UTF-8">
+
+<script>
+	
+
+	var jogador = 'X'
+	
+	var casa1 = ' '
+	var casa2 = ' '
+	var casa3 = ' '
+	var casa4 = ' '
+	var casa5 = ' '
+	var casa6 = ' '
+	var casa7 = ' '
+	var casa8 = ' '
+	var casa9 = ' '
+
+
+	function qualMovimento() {
+		
+		for(i = 0; i < 9; i++) {
+			
+			var posicao = prompt("Qual posição desejada?")
+
+			if(posicao == 1 && casa1 == ' ')  {
+				casa1 = jogador;
+				validaVencedor();
+				trocaJogador();
+				criaTabulerio();
+				
+			} else if(posicao == 2 && casa2 == ' ') {
+				casa2 = jogador;
+				validaVencedor();
+				trocaJogador();
+				criaTabulerio();
+				
+			} else if(posicao == 3 && casa3 == ' ') {
+				casa3 = jogador;
+				validaVencedor();
+				trocaJogador();
+				criaTabulerio();
+				
+			} else if(posicao == 4 && casa4 == ' ') {
+				casa4 = jogador;
+				validaVencedor();				
+				trocaJogador();
+				criaTabulerio();
+			} else if(posicao == 5 && casa5 == ' ') {
+				casa5 = jogador;
+				validaVencedor();
+				trocaJogador();
+				criaTabulerio();
+			} else if(posicao == 6 && casa6 == ' ') {
+				casa6 = jogador;
+				validaVencedor();
+				trocaJogador();
+				criaTabulerio();
+			} else if(posicao == 7 && casa7 == ' ') {
+				casa7 = jogador;
+				validaVencedor();
+				trocaJogador();
+				criaTabulerio();
+			} else if(posicao == 8 && casa8 == ' ') {
+				casa8 = jogador;
+				validaVencedor();
+				trocaJogador();
+				criaTabulerio();
+			} else if(posicao == 9 && casa9 == ' ') {
+				casa9 = jogador;
+				validaVencedor();
+				trocaJogador();
+				criaTabulerio();
+			} else  {
+				console.log('Movimento inválido, jogue novamente');
+				i = i - 1;
+			}
+		}
+		
+			return i;
+
+			function validaVencedor() {
+
+				if(casa1 + casa2 + casa3 == 'XXX') {
+					console.log("jogador 1 venceu!");
+					i = 10;
+				} else if(casa1 + casa2 + casa3 == 'OOO') {
+					console.log("jogador 2 venceu!");
+					i = 10;
+				} else if(casa4 + casa5 + casa6 == 'XXX') {
+					console.log("jogador 1 venceu!");
+					i = 10;
+				} else if(casa4 + casa5 + casa6 == 'OOO') {
+					console.log("jogador 2 venceu!");
+					i = 10;
+				} else if(casa7 + casa8 + casa9 == 'XXX') {
+					console.log("jogador 1 venceu!");
+					i = 10;
+				} else if(casa7 + casa8 + casa9 == 'OOO') {
+					console.log("jogador 1 venceu!");
+					i = 10;
+				} else if(casa1 + casa4 + casa7 == 'XXX') {
+					console.log("jogador 1 venceu!");
+					i = 10;
+				} else if(casa2 + casa5 + casa8 == 'XXX') {
+					console.log("jogador 1 venceu!");
+					i = 10;
+				} else if(casa3 + casa6 + casa9 == 'XXX') {
+					console.log("jogador 1 venceu!");
+					i = 10;
+				} else if(casa1 + casa4 + casa7 == 'OOO') {
+					console.log("jogador 2 venceu!");
+					i = 10;
+				} else if(casa2 + casa5 + casa8 == 'OOO') {
+					console.log("jogador 2 venceu!");
+					i = 10;
+				} else if(casa3 + casa6 + casa9 == 'OOO') {
+					console.log("jogador 2 venceu!");
+					i = 10;
+				} else if(casa1 + casa5 + casa9 == 'XXX') {
+					console.log("jogador 1 venceu!");
+					i = 10;
+				} else if(casa1 + casa5 + casa9 == 'OOO') {
+					console.log("jogador 2 venceu!");
+					i = 10;
+				} else if(casa3 + casa5 + casa7 == 'XXX') {
+					console.log("jogador 1 venceu!");
+					i = 10;
+				} else if(casa3 + casa5 + casa7 == 'OOO') {
+					console.log("jogador 2 venceu!");
+					i = 10;
+				} 
+			}
+		}
+
+	function criaTabulerio() {
+
+		console.log(" ");	
+		console.log(casa1 + '|' + casa2 + '|' + casa3);
+		console.log("-------");
+		console.log(casa4 + '|' + casa5 + '|' + casa6);
+		console.log("-------");
+		console.log(casa7 + '|' + casa8 + '|' + casa9);
+	}
+
+	function trocaJogador(){
+		if (jogador == 'X') {
+			jogador = "O";
+		} else {
+			jogador = 'X'
+		}
+	}
+
+	criaTabulerio();
+	qualMovimento();
+
+</script>
